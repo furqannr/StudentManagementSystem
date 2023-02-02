@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 // let students: [{ name: string, age: number, grade: string }] = [];
 // students[0] = { name: "Furqan", age: 7, grade: "A" };
@@ -93,7 +94,7 @@ function deleteStudent() {
             {
                 type: 'input',
                 name: 'name',
-                message: 'Which student do you want to delete?'
+                message: 'Which student do you want to delete? Enter name: '
             }
         ])
             .then(answer => {
@@ -104,6 +105,7 @@ function deleteStudent() {
                 }
             }
             if (index == -1) {
+                console.log("No user found with the above name");
                 mainMenu();
             }
             else {

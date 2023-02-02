@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 
 // let students: [{ name: string, age: number, grade: string }] = [];
